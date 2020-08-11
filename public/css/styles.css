@@ -154,6 +154,14 @@ button:disabled {
     margin-right: 16px;
 }
 
+@media screen and (max-width:400px) {
+    .compose form {
+        display: flex;
+        flex-direction: column;
+        margin-right: 16px;
+    }
+}
+
 .compose input {
     border: 1px solid #eeeeee;
     width: 100%;
@@ -164,6 +172,7 @@ button:disabled {
 
 .compose button {
     font-size: 14px;
+    align-self: center;
 }
 
 
