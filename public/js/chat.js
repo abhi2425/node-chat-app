@@ -17,7 +17,7 @@ const $sidebarTemplate = document.querySelector("#sidebarTemplate").innerHTML
 const { username, group } = Qs.parse(location.search, { ignoreQueryPrefix: true })
 
 socket.on('message', (message) => {
-    console.log(message)
+    //  console.log(message)
     const html = Mustache.render($messageTemplate, {
         username: message.username,
         message: message.text,
@@ -51,9 +51,9 @@ btn.addEventListener("click", (e) => {
     socket.emit('displayMessage', message, () => {
         //Enabling button
         btn.removeAttribute('disabled')
-            // $messageInput.value = ''
-            // $messageInput.focus()
-        console.log("Message is Delivered")
+        $messageInput.value = ''
+        $messageInput.focus()
+            //     console.log("Message is Delivered")
     })
 })
 
